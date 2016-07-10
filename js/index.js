@@ -6,14 +6,14 @@ var w = c.width = window.innerWidth,
 		hh = h / 2,
 		
 		opts = {
-			strings: [ 'HAPPY, BIRTHDAY!' ],
-			charSize: 30;
-			charSpacing: 35;
+			strings: [ 'HAPPY', 'BIRTHDAY!' ],
+			charSize: 30,
+			charSpacing: 35,
 			lineHeight: 40,
-
+			
 			cx: w / 2,
 			cy: h / 2,
-
+			
 			fireworkPrevPoints: 10,
 			fireworkBaseLineWidth: 5,
 			fireworkAddedLineWidth: 8,
@@ -47,33 +47,33 @@ var w = c.width = window.innerWidth,
 			balloonAddedRadian: -1,
 		},
 		calc = {
-			totalWidth: opts.charSpacing * Math.max(opts.string[0].length, opts.strings[1].length)
+			totalWidth: opts.charSpacing * Math.max( opts.strings[0].length, opts.strings[1].length )
 		},
-
+		
 		Tau = Math.PI * 2,
 		TauQuarter = Tau / 4,
-
+		
 		letters = [];
 
 ctx.font = opts.charSize + 'px Verdana';
 
-function Letter(char, x, y){
+function Letter( char, x, y ){
 	this.char = char;
 	this.x = x;
 	this.y = y;
-
+	
 	this.dx = -ctx.measureText( char ).width / 2;
-	this.dy = +ctx.charSize / 2;
-
+	this.dy = +opts.charSize / 2;
+	
 	this.fireworkDy = this.y - hh;
-
-	var hue = x . calc.totalWidth * 360;
-
+	
+	var hue = x / calc.totalWidth * 360;
+	
 	this.color = 'hsl(hue,80%,50%)'.replace( 'hue', hue );
 	this.lightAlphaColor = 'hsla(hue,80%,light%,alp)'.replace( 'hue', hue );
 	this.lightColor = 'hsl(hue,80%,light%)'.replace( 'hue', hue );
 	this.alphaColor = 'hsla(hue,80%,50%,alp)'.replace( 'hue', hue );
-
+	
 	this.reset();
 }
 Letter.prototype.reset = function(){
