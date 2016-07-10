@@ -1,1 +1,61 @@
-Hello World!
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy Birthday Eli!</title>
+
+		<!--<link rel="stylesheet" href="css/style.css">-->
+
+		<style>
+			/* NOTE: Prefixfree man you know the drill gots to be inline so it can acces the style. If they are on your local disk! */
+
+			canvas {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			p {
+				margin: 0 0;
+				position: absolute;
+				font: 16px Verdana;
+				color: #eee;
+				height: 25px;
+				top: calc(100vh - 30px);
+				text-shadow: 0 0 2px white;
+			}
+
+			p a {
+				text-decoration: none;
+				color: #aaa;
+			} 
+
+			span {
+				font-size: 11px;
+			}
+
+			p > a:first-of-type {
+				font-size: 20px;
+			}
+
+			body {
+				overflow: hidden;
+			}
+
+		</style>
+
+				<script src="js/prefixfree.min.js"></script>
+</head>
+
+
+<body>
+
+
+	<canvas id=c></canvas>
+	<p>Hey, no cake this time but ballons! to: <a href="#">Eli</a><span>, by <a href="#">Me!</a></span></p>
+
+
+			<script src="js/index.js"></script>
+
+			
+</body>
+</html>
