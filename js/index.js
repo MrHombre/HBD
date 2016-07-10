@@ -1,3 +1,7 @@
+/* This awesome/amazing Javascript file wasn't written by me 
+(though I did rewrite everything for my own purpose)
+it can be found at http://codepen.io/towc/pen/LGMGQG. */
+
 var w = c.width = window.innerWidth,
 		h = c.height = window.innerHeight,
 		ctx = c.getContext( '2d' ),
