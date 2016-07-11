@@ -9,6 +9,7 @@ var w = c.width = window.innerWidth,
 		hw = w / 2, // half-width
 		hh = h / 2,
 		
+		// FireWorks
 		opts = {
 			strings: [ 'HAPPY', 'BIRTHDAY', 'ELIZABETH!' ],
 			charSize: 30,
